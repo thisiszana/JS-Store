@@ -9,6 +9,7 @@ const dashboardBtn = document.getElementById("dashboard");
 const mainProducts = document.getElementById("products");
 const searchBtn = document.querySelector("button");
 const inputBox = document.querySelector("input");
+const listItems = document.querySelectorAll("li");
 
 const showProducts = (products) => {
   mainProducts.innerHTML = "";
@@ -55,7 +56,7 @@ const init = async () => {
 const searchHandler = () => {
   const query = inputBox.value.trim().toLowerCase();
 
-  if (!query) showProducts(allProducts);
+  if (!query) return showProducts(allProducts);
 
   const filteredProducts = allProducts.filter((product) =>
     product.title.toLowerCase().includes(query)
@@ -64,5 +65,26 @@ const searchHandler = () => {
   showProducts(filteredProducts);
 };
 
+const filterHandler = (e) => {
+  const category = e.target.innerText.toLowerCase();
+
+  listItems.forEach((li) => {
+    if (li.innerText.toLowerCase() === category) {
+      li.className = "selected";
+    } else {
+      li.className = "";
+    }
+  });
+
+  if (category === "all") return showProducts(allProducts);
+
+  const filteredProducts = allProducts.filter(
+    (product) => product.category.toLowerCase() === category
+  );
+
+  showProducts(filteredProducts);
+};
+
 document.addEventListener("DOMContentLoaded", init);
 searchBtn.addEventListener("click", searchHandler);
+listItems.forEach((li) => li.addEventListener("click", filterHandler));
