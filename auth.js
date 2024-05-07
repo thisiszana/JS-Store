@@ -17,7 +17,10 @@ const submitHandler = async (e) => {
 
   if (!validation) return;
 
-  const res = await postData("auth/login", { username, password });
+  const res = await postData("auth/login", {
+    username,
+    password,
+  });
 
   setCookie(res.token);
   location.assign("/");

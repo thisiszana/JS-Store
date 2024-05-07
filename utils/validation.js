@@ -13,8 +13,8 @@ const validatePassword = (password) => {
 };
 
 const validateForm = (username, password) => {
-  const usernameResult = validatePassword(username);
-  const passwordResult = validateUsername(password);
+  const usernameResult = validateUsername(username);
+  const passwordResult = validatePassword(password);
 
   if (usernameResult && passwordResult) {
     return true;
