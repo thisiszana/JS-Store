@@ -1,0 +1,177 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  margin-bottom: 30px;
+}
+
+header h3 {
+  color: var(--color-primary);
+  font-size: 1.6rem;
+}
+
+header a {
+  color: #000;
+  text-decoration: none;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+header i {
+  margin-left: 10px;
+}
+
+header a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+#search h1 {
+  margin-bottom: 15px;
+}
+
+#search input {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid silver;
+  border-radius: 5px;
+  color: var(--color-primary);
+  font-size: 1rem;
+}
+
+#search button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--color-primary);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+#search button:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+#container {
+  display: flex;
+  margin: 80px 0 40px;
+}
+
+#filter {
+  padding: 20px;
+  background-color: #fff;
+  margin-left: 20px;
+  height: fit-content;
+  border-radius: 10px;
+  position: sticky;
+  top: 30px;
+}
+
+#filter div {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+}
+
+#filter p {
+  margin-left: 20px;
+}
+
+#filter li {
+  list-style-type: none;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+#filter li:hover {
+  color: var(--color-primary);
+}
+
+#filter .selected {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#products > div {
+  background-color: #fff;
+  width: 250px;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  position: relative;
+}
+
+img {
+  width: 220px;
+  height: 220px;
+  margin: 50px 0 40px;
+}
+
+h4 {
+  color: var(--color-primary);
+}
+
+#price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0 10px;
+}
+
+#price p {
+  color: gray;
+  font-weight: 600;
+}
+
+#price button {
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#price button:hover {
+  color: #fff;
+  background-color: var(--color-primary);
+}
+
+#rate {
+  position: absolute;
+  top: 15px;
+  background-color: var(--color-background);
+  color: var(--color-warning);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+#count {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--color-background);
+  color: var(--color-error);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
