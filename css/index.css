@@ -70,7 +70,7 @@ header a:hover {
   height: fit-content;
   border-radius: 10px;
   position: sticky;
-  top: 30px;
+  top: 50px;
 }
 
 #filter div {
@@ -174,4 +174,29 @@ h4 {
   padding: 5px;
   border-radius: 5px;
   font-size: 0.9rem;
+}
+
+@media (max-width: 901px) {
+  #container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  #filter {
+    position: static;
+    margin-bottom: 50px;
+  }
+
+  #search {
+    display: flex;
+    justify-content: center;
+  }
+
+  #search h1 {
+    display: none;
+  }
+
+  #search input {
+    width: 200px;
+  }
 }
